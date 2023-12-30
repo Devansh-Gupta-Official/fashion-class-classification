@@ -4,6 +4,9 @@ This repository contains code for a Fashion Classification project using the Fas
 
 ## Dataset
 The dataset used in this project is from the Fashion MNIST website. It consists of 60,000 training samples and 10,000 test samples, each containing 785 columns representing pixel values and labels.
+The dataset can be downloaded from the following source - 
+
+[Dataset](https://www.kaggle.com/datasets/zalando-research/fashionmnist)
 
 ## Problem Statement
 Fashion training set consists of 70,000 images divided into 60,000 training and 10,000 testing samples. Dataset sample consists of 28x28 grayscale image, associated with a label from 10 classes. 
