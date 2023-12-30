@@ -114,12 +114,15 @@ The model achieved an accuracy of **88.12%** on the test set. The classification
 The README includes visualizations of:
 
 - Random images from the dataset to showcase clothing items
+
 ![image](https://github.com/Devansh-Gupta-Official/fashion-class-classification/assets/100591612/cc197dd0-7df2-4efc-a710-489f52dd523d)
 
 - Confusion matrix providing insights into classification performance
+
 ![image](https://github.com/Devansh-Gupta-Official/fashion-class-classification/assets/100591612/c76ef548-0879-40c3-8962-d834d9853060)
 
 - Classification report for detailed evaluation metrics
+
 ![image](https://github.com/Devansh-Gupta-Official/fashion-class-classification/assets/100591612/339d2c30-645a-414e-b634-09a545593156)
 
 
