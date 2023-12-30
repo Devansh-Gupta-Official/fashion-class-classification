@@ -73,6 +73,9 @@ plt.show()
 
 These visualizations aid in comprehending the dataset's characteristics, such as the variety of clothing items, pixel intensity distributions, and the distribution of samples across different classes. They provide essential insights before model training, guiding preprocessing steps and potential class balancing considerations.
 
+![image](https://github.com/Devansh-Gupta-Official/fashion-class-classification/assets/100591612/64271004-9fe3-441c-8c21-fb731eb00d1f)
+
+
 ### STEP 3: Model Training
 A Convolutional Neural Network (CNN) architecture is implemented using Keras. The model consists of convolutional layers, pooling layers, and fully connected layers. The model is compiled with appropriate loss, optimizer, and metrics for training. The model is trained using the Adam optimizer and sparse categorical cross-entropy loss for 50 epochs. During training, accuracy steadily increases, and validation accuracy stabilizes around 88%.
 
@@ -103,6 +106,7 @@ After training, the model's performance is evaluated using the test dataset:
 - Prediction and comparison of predicted classes with true classes
 - Detailed evaluation metrics including precision, recall, and F1-score using classification_report from sklearn.metrics
 
+
 ## Results
 The model achieved an accuracy of **88.12%** on the test set. The classification report provides detailed metrics including precision, recall, and F1-score for each clothing class.
 
@@ -110,8 +114,14 @@ The model achieved an accuracy of **88.12%** on the test set. The classification
 The README includes visualizations of:
 
 - Random images from the dataset to showcase clothing items
+![image](https://github.com/Devansh-Gupta-Official/fashion-class-classification/assets/100591612/cc197dd0-7df2-4efc-a710-489f52dd523d)
+
 - Confusion matrix providing insights into classification performance
+![image](https://github.com/Devansh-Gupta-Official/fashion-class-classification/assets/100591612/c76ef548-0879-40c3-8962-d834d9853060)
+
 - Classification report for detailed evaluation metrics
+![image](https://github.com/Devansh-Gupta-Official/fashion-class-classification/assets/100591612/339d2c30-645a-414e-b634-09a545593156)
+
 
 
 ## Usage
