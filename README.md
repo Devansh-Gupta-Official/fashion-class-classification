@@ -25,18 +25,33 @@ Each image is 28 pixels in height and 28 pixels in width, for a total of 784 pix
 ## Model Workflow
 
 ### STEP 1: Importing Libraries and Data
-The notebook begins by importing necessary libraries such as pandas, numpy, matplotlib, seaborn, and keras to handle data manipulation, visualization, and model building. The dataset is loaded and inspected to understand its structure and contents.
+The notebook starts by importing necessary libraries:
+
+- pandas: For data manipulation
+- numpy: For numerical operations
+- matplotlib and seaborn: For data visualization
+- keras: For building and training the neural network model
+The dataset is loaded into pandas DataFrames using pd.read_csv() from respective CSV files: fashion-mnist_train.csv and fashion-mnist_test.csv. The data is then inspected to understand its structure using methods like head(), shape, and info().
 
 ### STEP 2: Visualizing the Dataset
-Exploratory visualization of the dataset is performed to gain insights into the clothing items. It includes displaying sample images, understanding pixel values, and showcasing the distribution of different clothing categories.
+Exploratory visualization is performed to gain insights into the dataset:
 
-### STEP 3: Preprocessing Data
-Data preprocessing steps include normalization, splitting data into training, validation, and testing sets, reshaping images into a format suitable for CNN input, and preparing the data for model training.
+- Displaying sample images using matplotlib.pyplot.imshow()
+- Understanding pixel values and their distribution
+- Showcasing the distribution of different clothing categories using plots such as histograms or count plots from seaborn
 
-### STEP 4: Model Training
+### STEP 3: Model Training
 A Convolutional Neural Network (CNN) architecture is implemented using Keras. The model consists of convolutional layers, pooling layers, and fully connected layers. The model is compiled with appropriate loss, optimizer, and metrics for training. The model is trained using the Adam optimizer and sparse categorical cross-entropy loss for 50 epochs. During training, accuracy steadily increases, and validation accuracy stabilizes around 88%.
 
-## Model Architecture
+**Preprocessing Data**
+Data preprocessing steps include:
+
+- Normalization of pixel values to bring them into a range suitable for model training
+- Splitting data into training, validation, and testing sets using train_test_split from sklearn
+- Reshaping images into a format suitable for CNN input (in this case, (28, 28, 1) for grayscale images)
+
+  
+**Model Architecture**
 The CNN model architecture involves:
 
 - Input layer: 28x28x1 (grayscale)
@@ -44,10 +59,21 @@ The CNN model architecture involves:
 - Max Pooling layers for down-sampling
 - Dense layers with softmax activation for classification
 
+  
+**Model Training**
+The model is compiled using the Adam optimizer and sparse_categorical_crossentropy loss function. Training is performed using model.fit() method with the training data, validation data, batch size, and number of epochs.
+
+### STEP 4: Evaluating the Model
+After training, the model's performance is evaluated using the test dataset:
+
+- Accuracy metrics on the test set using model.evaluate()
+- Prediction and comparison of predicted classes with true classes
+- Detailed evaluation metrics including precision, recall, and F1-score using classification_report from sklearn.metrics
+
 ## Results
 The model achieved an accuracy of **88.12%** on the test set. The classification report provides detailed metrics including precision, recall, and F1-score for each clothing class.
 
-### Visualizations
+**Visualizations**
 The README includes visualizations of:
 
 - Random images from the dataset to showcase clothing items
