@@ -34,11 +34,44 @@ The notebook starts by importing necessary libraries:
 The dataset is loaded into pandas DataFrames using pd.read_csv() from respective CSV files: fashion-mnist_train.csv and fashion-mnist_test.csv. The data is then inspected to understand its structure using methods like head(), shape, and info().
 
 ### STEP 2: Visualizing the Dataset
-Exploratory visualization is performed to gain insights into the dataset:
+Exploratory visualization is a crucial step to understand the characteristics of the dataset. This section involves various visualization techniques to gain insights into the Fashion MNIST dataset:
 
-- Displaying sample images using matplotlib.pyplot.imshow()
-- Understanding pixel values and their distribution
-- Showcasing the distribution of different clothing categories using plots such as histograms or count plots from seaborn
+**Sample Images Display**
+
+Using Matplotlib, several sample images are displayed to provide a visual understanding of the clothing items. This includes using imshow() to visualize individual items from the dataset. For instance:
+```
+plt.imshow(training[10, 1:].reshape(28, 28))
+plt.title("Example Clothing Item")
+plt.show()
+```
+
+**Pixel Value Distribution**
+
+Understanding the distribution of pixel values across the dataset is vital. Histograms or density plots are employed to visualize the range and frequency of pixel values. This allows observing the range of intensity levels in grayscale images and identifying potential normalization requirements.
+```
+# Visualizing pixel value distribution
+plt.figure(figsize=(8, 5))
+plt.hist(training[10, 1:], bins=30)
+plt.xlabel('Pixel Value')
+plt.ylabel('Frequency')
+plt.title('Pixel Value Distribution in an Image')
+plt.show()
+```
+
+**Category Distribution**
+The distribution of different clothing categories in the dataset is visualized using count plots or bar plots from Seaborn or Matplotlib. This helps in understanding the balance or imbalance in the dataset regarding the number of samples per class.
+
+```
+# Visualizing distribution of clothing categories
+plt.figure(figsize=(8, 6))
+sns.countplot(x='label', data=df_train)
+plt.title('Distribution of Clothing Categories')
+plt.xlabel('Class Label')
+plt.ylabel('Count')
+plt.show()
+```
+
+These visualizations aid in comprehending the dataset's characteristics, such as the variety of clothing items, pixel intensity distributions, and the distribution of samples across different classes. They provide essential insights before model training, guiding preprocessing steps and potential class balancing considerations.
 
 ### STEP 3: Model Training
 A Convolutional Neural Network (CNN) architecture is implemented using Keras. The model consists of convolutional layers, pooling layers, and fully connected layers. The model is compiled with appropriate loss, optimizer, and metrics for training. The model is trained using the Adam optimizer and sparse categorical cross-entropy loss for 50 epochs. During training, accuracy steadily increases, and validation accuracy stabilizes around 88%.
