@@ -22,8 +22,16 @@ The 10 classes are as follows:
 
 Each image is 28 pixels in height and 28 pixels in width, for a total of 784 pixels in total. Each pixel has a single pixel-value associated with it, indicating the lightness or darkness of that pixel, with higher numbers meaning darker. This pixel-value is an integer between 0 and 255. 
 
-## STEP 1: Importing Libraries and Data
+## Model Workflow
+
+### STEP 1: Importing Libraries and Data
 The notebook begins by importing necessary libraries such as pandas, numpy, matplotlib, seaborn, and keras to handle data manipulation, visualization, and model building. The dataset is loaded and inspected to understand its structure and contents.
 
-## STEP 1: Visualizing the Dataset
+### STEP 2: Visualizing the Dataset
 Exploratory visualization of the dataset is performed to gain insights into the clothing items. It includes displaying sample images, understanding pixel values, and showcasing the distribution of different clothing categories.
+
+### STEP 3: Preprocessing Data
+Data preprocessing steps include normalization, splitting data into training, validation, and testing sets, reshaping images into a format suitable for CNN input, and preparing the data for model training.
+
+### STEP 4: Model Training
+A Convolutional Neural Network (CNN) architecture is implemented using Keras. The model consists of convolutional layers, pooling layers, and fully connected layers. The model is compiled with appropriate loss, optimizer, and metrics for training.
